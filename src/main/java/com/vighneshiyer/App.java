@@ -4,10 +4,7 @@ import com.vighneshiyer.datafetcher.DataFetcher;
 import com.vighneshiyer.datafetcher.DukascopyDataFetcher;
 import com.vighneshiyer.datafetcher.TradingviewDataFetcher;
 
-import java.time.Instant;
-import java.time.LocalDateTime;
-import java.time.Month;
-import java.time.ZoneOffset;
+import java.time.*;
 import java.util.Map;
 
 public class App {
@@ -19,8 +16,8 @@ public class App {
         DukascopyDataFetcher dataFetcher = new DukascopyDataFetcher();
         dataFetcher.preloadHistoricalTicksForSymbol(
                 "EURUSD",
-                LocalDateTime.of(2015, Month.JANUARY, 1, 0, 0).atZone(ZoneOffset.UTC),
-                LocalDateTime.now().atZone(ZoneOffset.UTC)
+                LocalDateTime.of(2015, Month.JANUARY, 1, 0, 0).atZone(ZoneId.systemDefault()),
+                LocalDateTime.now().atZone(ZoneId.systemDefault())
         );
     }
 

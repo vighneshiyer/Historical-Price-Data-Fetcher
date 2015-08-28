@@ -3,6 +3,7 @@ package com.vighneshiyer.datafetcher;
 import com.vighneshiyer.OHLC;
 
 import java.time.Instant;
+import java.time.LocalDateTime;
 import java.time.ZonedDateTime;
 import java.util.concurrent.Future;
 
